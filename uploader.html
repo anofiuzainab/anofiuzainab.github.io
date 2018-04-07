@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Uploader - Recycling App</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+      <link rel="stylesheet" href="./assets/main.css">
+      <link rel="stylesheet" href="./assets/application.min.css">
+      <link rel="stylesheet" href="./assets/demo.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style type="text/css">.im-caret {
+         -webkit-animation: 1s blink step-end infinite;
+         animation: 1s blink step-end infinite;
+         }
+         @keyframes blink {
+         from, to {
+         border-right-color: black;
+         }
+         50% {
+         border-right-color: transparent;
+         }
+         }
+         @-webkit-keyframes blink {
+         from, to {
+         border-right-color: black;
+         }
+         50% {
+         border-right-color: transparent;
+         }
+         }
+         .im-static {
+         color: grey;
+         }
+      </style>
+   </head>
+   <body class="layout layout-header-fixed layout-sidebar-collapsed">
+      <div class="layout-header">
+         <div class="navbar navbar-default">
+            <div class="navbar-header">
+               <button class="navbar-toggler visible-xs-block collapsed" type="button" data-toggle="collapse" data-target="#sidenav">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="bars">
+               <span class="bar-line bar-line-1 out"></span>
+               <span class="bar-line bar-line-2 out"></span>
+               <span class="bar-line bar-line-3 out"></span>
+               </span>
+               <span class="bars bars-x">
+               <span class="bar-line bar-line-4"></span>
+               <span class="bar-line bar-line-5"></span>
+               </span>
+               </button>
+               <button class="navbar-toggler visible-xs-block collapsed" type="button" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="arrow-up"></span>
+               <span class="ellipsis ellipsis-vertical">
+               <img class="ellipsis-object" width="32" height="32" src="./assets/0180441436.png" alt="Juice Box">
+               </span>
+               </button>
+            </div>
+            <div class="navbar-toggleable">
+               <nav id="navbar" class="navbar-collapse collapse">
+                  <button class="sidenav-toggler hidden-xs collapsed" title="Expand sidenav ( [ )" aria-expanded="false" type="button">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="bars">
+                  <span class="bar-line bar-line-1 out"></span>
+                  <span class="bar-line bar-line-2 out"></span>
+                  <span class="bar-line bar-line-3 out"></span>
+                  <span class="bar-line bar-line-4 in"></span>
+                  <span class="bar-line bar-line-5 in"></span>
+                  <span class="bar-line bar-line-6 in"></span>
+                  </span>
+                  </button>
+                  <ul class="nav navbar-nav navbar-right">
+                     <li class="visible-xs-block">
+                        <h4 class="navbar-text text-center">Hi, Juice Box</h4>
+                     </li>
+                     <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true">
+                        <span class="icon-with-child hidden-xs">
+                        <span class="icon icon-bell-o icon-lg"></span>
+                        <span class="badge badge-primary badge-above right">1</span>
+                        </span>
+                        <span class="visible-xs-block">
+                        <span class="icon icon-bell icon-lg icon-fw"></span>
+                        <span class="badge badge-primary pull-right">7</span>
+                        Notifications
+                        </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
+                           <div class="dropdown-header">
+                              <a class="dropdown-link" href="#">Mark all as read</a>
+                              <h5 class="dropdown-heading">Recent Notifications</h5>
+                           </div>
+                           <div class="dropdown-body">
+                              <div class="custom-scrollable-area" style="position: relative; overflow: hidden; width: 100%; height: 100%;">
+                                 <div class="list-group list-group-divided custom-scrollbar" style="overflow: hidden; width: 100%; height: 100%;">
+                                    <a class="list-group-item" href="#">
+                                       <div class="notification">
+                                          <div class="notification-media">
+                                             <img class="circle" width="40" height="40" src="./assets/0180441436.png" alt="Juice Box">
+                                          </div>
+                                          <div class="notification-content">
+                                             <small class="notification-timestamp">9 hr</small>
+                                             <h5 class="notification-heading">Juice Box</h5>
+                                             <p class="notification-text">
+                                                <small class="truncate">Published a new post: "Planting a tree is a lifelong investment".</small>
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                                 <div class="custom-scrollbar-gripper" style="background: rgb(0, 0, 0); width: 6px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 5px;"></div>
+                                 <div class="custom-scrollbar-track" style="width: 6px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 5px;"></div>
+                              </div>
+                           </div>
+                           <div class="dropdown-footer">
+                              <a class="dropdown-btn" href="#">See All</a>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="dropdown hidden-xs">
+                        <button class="navbar-account-btn" data-toggle="dropdown" aria-haspopup="true">
+                        <img class="circle" width="36" height="36" src="./assets/0180441436.png" alt="Juice Box"> Juice Box
+                        <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                           <li><a href="">Profile</a></li>
+                           <li><a href="">Sign out</a></li>
+                        </ul>
+                     </li>
+                     <li class="visible-xs-block">
+                        <a href="">
+                        <span class="icon icon-user icon-lg icon-fw"></span>
+                        Profile
+                        </a>
+                     </li>
+                     <li class="visible-xs-block">
+                        <a href="">
+                        <span class="icon icon-power-off icon-lg icon-fw"></span>
+                        Sign out
+                        </a>
+                     </li>
+                  </ul>
+                  <div class="title-bar">
+                     <h1 class="title-bar-title">
+                        <span class="d-ib">Recycling App</span>
+                        <span class="d-ib">
+                        <a class="title-bar-shortcut" href="#" title="" data-container="body" data-toggle-text="Remove from bookmark" data-trigger="hover" data-placement="right" data-toggle="tooltip" data-original-title="Add to bookmark">
+                        <span class="sr-only">Add to bookmark</span>
+                        </a>
+                        </span>
+                     </h1>
+                     <p class="title-bar-description">
+                        <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+                     </p>
+                  </div>
+               </nav>
+            </div>
+         </div>
+      </div>
+      <div class="layout-main">
+      <div class="layout-sidebar">
+         <div class="layout-sidebar-backdrop"></div>
+         <div class="layout-sidebar-body">
+            <div class="custom-scrollbar">
+               <nav id="sidenav" class="sidenav-collapse collapse">
+                  <ul class="sidenav level-1 sidenav-collapsed" aria-expanded="false" style="opacity: 1;">
+                     <li class="sidenav-search">
+                        <form class="sidenav-form" action="">
+                           <div class="form-group form-group-sm">
+                              <div class="input-with-icon">
+                                 <input class="form-control" type="text" placeholder="Search…">
+                                 <span class="icon icon-search input-icon"></span>
+                              </div>
+                           </div>
+                        </form>
+                     </li>
+                     <li class="sidenav-heading">Navigation</li>
+                     <li class="sidenav-item">
+                        <a href="">
+                        <span class="sidenav-badge badge badge-primary">10</span>
+                        <i class="fa sidenav-icon icon icon-works">&#xf015;</i>
+                        <span class="sidenav-label">Home</span>
+                        </a>
+                     </li>
+                     <li class="sidenav-item">
+                        <a href="info.html">
+                        <i class="fa sidenav-icon icon icon-works">&#xf05a;</i>
+                        <span class="sidenav-label">Image Info</span>
+                        </a>
+                     </li>
+                     <li class="sidenav-item">
+                        <a href="index.html">
+                        <i class="fa sidenav-icon icon icon-works">&#xf007;</i>
+                        <span class="sidenav-label">Profile</span>
+                        </a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+      <div class="layout-content">
+         <div class="layout-content-body">
+            <div class="row">
+               <div class="col-xs-12">
+                  <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet euismod nisl sit amet volutpat. Maecenas aliquet pellentesque posuere.</small></p>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xs-12">
+                  <form id="demo-uploader" action="#" method="post" enctype="multipart/form-data">
+                     <div class="form-group">
+                        <label class="file-upload-btn btn btn-primary">
+                        Upload files
+                        <input class="file-upload-input" type="file" name="files[]" multiple="multiple">
+                        </label>
+                     </div>
+                     <div class="form-group">
+                        <ul class="file-list"></ul>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="layout-footer">
+      </div>
+      <script src="./assets/main.js"></script>
+      <script src="./assets/application.min.js"></script>
+      <script src="./assets/demo.min.js"></script>
+   </body>
+</html>
